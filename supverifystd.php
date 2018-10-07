@@ -6,7 +6,7 @@
     if($conn->query($qry)){
         // echo '<script>alert("Activated !")</script>';
         $conn->query($qry2);
-        header('Location: '.'supverifystudent');
+        header('Location: '.'supverifystudent.php');
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
         //header('Location: '.'supdowni1form?ustatus=false&type=db');

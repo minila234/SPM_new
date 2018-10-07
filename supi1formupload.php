@@ -44,13 +44,13 @@ if ($uploadOk == 0) {
     // $qry="insert into supervisor_forms(Email_student,Date,FormI_1) values('".$_POST['stdid']."',NOW(),'".$target_file2."')";
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file2)) {
         if($conn->query($qry)){
-            header('Location: '.'supdowni1form?ustatus=true');
+            header('Location: '.'supdowni1form.php?ustatus=true');
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
             //header('Location: '.'supdowni1form?ustatus=false&type=db');
         }
     } else {
-        header('Location: '.'supdowni1form?ustatus=false&type=file');
+        header('Location: '.'supdowni1form.php?ustatus=false&type=file');
     }
     
 }

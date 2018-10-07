@@ -71,18 +71,18 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto text-center mr-lg-5">
                     <li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-						<a class="nav-link" href="supverifystudent">Verify Students</a>
+						<a class="nav-link" href="supverifystudent.php">Verify Students</a>
 					</li>
                     <li class="nav-item mr-lg-2 mb-lg-0 mb-2 active">
-						<a class="nav-link" href="supdowni1form">Fill Form I-1
+						<a class="nav-link" href="supdowni1form.php">Fill Form I-1
                             <span class="sr-only">(current)</span>
                         </a>
 					</li>
 					<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-						<a class="nav-link" href="supdowni3form">Attest I-3 Forms</a>
+						<a class="nav-link" href="supdowni3form.php">Attest I-3 Forms</a>
 					</li>
                     <li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-						<a class="nav-link" href="supdowni5form">Feedback Form I-5</a>
+						<a class="nav-link" href="supdowni5form.php">Feedback Form I-5</a>
 					</li>
 					 
 					<!--<li class="nav-item mr-lg-2 mb-lg-0 mb-2">

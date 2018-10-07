@@ -43,13 +43,13 @@ if ($uploadOk == 0) {
     $qry="update supervisor_forms set FormI_6='".$target_file2."' where Email_student='".$_POST['stdid']."'";
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file2)) {
         if($conn->query($qry)){
-            header('Location: '.'supdowni5form?ustatus=true');
+            header('Location: '.'supdowni5form.php?ustatus=true');
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
             //header('Location: '.'supdowni1form?ustatus=false&type=db');
         }
     } else {
-        header('Location: '.'supdowni5form?ustatus=false&type=file');
+        header('Location: '.'supdowni5form.php?ustatus=false&type=file');
     }
     
 }
