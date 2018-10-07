@@ -1,0 +1,188 @@
+<?php
+include('session_connect.php')
+?>
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<title>Forms</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="Fabricate Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"
+	/>
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<script>
+
+function validate()
+{
+	var username = document.getElementById("username").value;
+	var password1 = document.getElementById("password1").value;
+	
+	
+		if(usernameValidate(username))
+			if(passValidate(username,password1))
+				return true;
+			else
+				return false
+		else
+			return false
+	
+}
+function checkEmpty(val,field)
+{
+	if(val=="" || val==null)
+	{
+		alert("You cannot have "+field+" field empty !");
+		return true;
+	}else
+	{
+		return false;
+	}
+}
+function passValidate(val)
+{
+	if(!checkEmpty(val,"password1"))
+	{
+		if(val.length>=8)
+		{
+			return true;
+		}else
+		{
+			alert("Password should be atleast 8 characters !");
+			return false;
+		}
+	}else
+		return false;
+}
+function isEmail(val)
+{
+	if(!checkEmpty(val,"Email"))
+	{
+		var at = val.indexOf("@");
+		var dot = val.indexOf(".");
+		if(at<1 || dot+2>=val.length || at+2>dot)
+		{
+			alert("Enter a valid email address");
+			return false;
+		}else
+			return true;
+	}else
+		return false;
+}
+function isNic(cnic_no)
+{
+	//var temp = /^[0-9+]{9}[vV]{1}$/;
+	//if(!checkEmpty(val,"Nic"))
+	//{
+		//if(val.match(temp))
+		//{
+			//if(val.length==10)
+				//return true;
+			//else
+		//	{
+			//	alert("Nic should consist of 10 digits !");
+				//return false;
+			//}
+		//}else
+		//{
+			//alert("Nic should only consist of Numeric characters + V sign!");
+			//return false;
+		//}
+	//}else
+		//return false;-->
+cnic_no_regex = /^[0-9]{9}[v|V]{1}$/;
+
+if(cnic_no_regex.test(cnic_no)) 
+{
+    alert('Right');
+}
+else 
+{
+    alert('Wrong');
+}
+}
+
+
+</script>
+
+	<!-- //Meta tag Keywords -->
+
+	<!-- Custom-Files -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Bootstrap-Core-CSS -->
+	<link rel="stylesheet" href="css/lightbox.css">
+	<!-- gallery light box -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/style1.css" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<link rel="stylesheet" href="css/fontawesome-all.css">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //Custom-Files -->
+
+	<!-- Web-Fonts -->
+	<link href="//fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+	<!-- //Web-Fonts -->
+
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top">
+
+	<!-- //header -->
+
+<body class="banner-w3l">
+
+<div class="title-agile">
+
+        <h1 class="title-agile text-center">Signup Forms</h1>
+    
+	</div>
+	 <section class="login-wrap">
+        <div class="main_w3agile">
+            
+            <input id="tab-2" type="radio" name="tab" class="sign-up" checked>
+            <label for="tab-2" class="tab">Signup Forms</label>
+            <div class="login-form">
+              
+                <div class="signup_wthree">
+                    <div class="row">
+						<div class="col-sm-4"><a href = "StudentSignup.html"><img src="images/student2.png" alt=" " class="img-fluid"></a><label style= "text-align : center">STUDENTS</label></div>
+						<div class="col-sm-4"><a href = "SupervisorSignup.html"><img src="images/supervisor.png" alt=" " class="img-fluid"></a><label style= "text-align : center">SUPERVISOR</label></div>
+						<div class="col-sm-4"><a href = "ITMSignup.html"><img src="images/ITM.jpg" alt=" " class="img-fluid"></a></a><label style= "text-align : center">ITM</label></div>
+                </div>
+               
+               </div>
+			   </div>
+        </div>
+    </section>
+	
+	 <footer>
+        <div class="copy-wthree text-center">
+            <p>© 2018 All rights reserved
+            </p>
+        </div>
+    </footer>
+	
+	
+<!--<section class="login-wrap">
+<div class="main_w3agile">
+<div class="login-form">
+
+
+</div>
+</div>
+</section>-->
+</body>
+
+
+</html>
