@@ -24,7 +24,7 @@ $db = mysql_select_db("spm", $connection);
 								if(mysql_query($insertString ))
 								{
 									//echo 'Successfully Created';
-									header('Location: SupervisorSignup.html');
+									header('Location: userDashboard.html');
 								}
 								else{
 									echo 'Failed supervisor table - '.mysql_error();

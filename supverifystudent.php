@@ -4,11 +4,11 @@
     // check if user has logged in using sessions
     $cmpRes =$conn->query("SELECT * 
     FROM supervisor s inner join log l on l.Username=s.Email_supervisor
-    WHERE l.Username='admin@a.com' LIMIT 1"); // Get email from user sessions
+    WHERE l.Username='abc@abc.com' LIMIT 1"); // Get email from user sessions
     $row = $cmpRes->fetch_assoc();
     $comp = $row['Company'];
     //get data related to the supervisor
-    $results=$conn->query("select * from student where Company='$comp' and verfication=0");
+    $results=$conn->query("select * from student where Company='abc' and verfication=0");
 ?>
 <html lang="en">
 <head>

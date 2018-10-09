@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	//Looking for autherized user
-	if(!isset($_SESSION['username'])){	
+	if(isset($_SESSION['login_user'])){	
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,8 +57,8 @@
 					<li class="nav-item">
 					<!-- To check whether the user has logged in or not -->
 					<?php
-							if(isset($_SESSION['username'])){
-								echo '<a class="nav-link" href="logout_v.php">Log Out</a>';
+							if(isset($_SESSION['login_user'])){
+								echo '<a class="nav-link" href="index.html">Log Out</a>';
 							}
 							else{
 								echo '<a class="nav-link" href="login.html">Sign In | Sign Up</a>';

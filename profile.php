@@ -1,5 +1,6 @@
 <?php
-include('session_connect.php')
+include('session_connect.php');
+//session_start();
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -96,7 +97,7 @@ include('session_connect.php')
                 <!-- profile  -->
                 <div class="signup_wthree">
                     <?php
-					if($Userype == "student"){
+					if($_SESSION['login_user_type'] == "student"){
 					echo "<h1>"."Student profile"."</h1>"."<br/>"."<br/>";
 					echo "First Name				:".$fname."<br/>"."<br/>";
 					echo "Last Name				    :".$lname."<br/>"."<br/>";
@@ -107,7 +108,7 @@ include('session_connect.php')
 					echo "address				    :".$address."<br/>"."<br/>";
 					echo "grading				    :".$grading."<br/>"."<br/>";
 					}
-					else if($Userype == "supervisor"){
+					else if($_SESSION['login_user_type'] == "supervisor"){
 						echo "<h1>"."Supervisor profile"."</h1>"."<br/>"."<br/>";
 					echo "Email						:".$email."<br/>"."<br/>";
 					echo "Company				    :".$company."<br/>"."<br/>";

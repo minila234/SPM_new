@@ -26,7 +26,7 @@ $db = mysql_select_db("spm", $connection);
 								if(mysql_query($insertString ))
 								{
 									//echo 'Successfully Created';
-									header('Location: StudentSignup.html');
+									header('Location: userDashboard.html');
 								}
 								else{
 									echo 'Failed student table - '.mysql_error();

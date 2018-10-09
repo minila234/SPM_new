@@ -20,15 +20,19 @@ $query = mysqli_query($connection,"select * from log where Password = '$password
 
 //$query = $connection->query("select * from log where password = '$password' AND Username = '$email'");
 
-$rows = $query->num_rows;
 
-if ($rows == 1) {
-	
+ if($query->num_rows>0){
+                while($row=$query->fetch_assoc()){
+						
 $_SESSION['login_user']=$email;// Initializing Session
 $_SESSION['login_user_type']=$row['Type'];
-echo($_SESSION['login_user']);
 header("location: userDashboard.html");// Redirecting To Other Page
-} else {
+}
+				}
+
+
+
+ else {
 $error = "email or Password is invalid";
 echo '<script>alert("Incorrect credentials");</script>';
 

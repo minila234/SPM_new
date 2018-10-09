@@ -5,7 +5,7 @@
     if(isset($_SESSION['login_user'])){
         $sesUser=$_SESSION['login_user'];
     }else
-        $sesUser='admin@a.com';
+        $sesUser='abc@abc.com';
     $cmpRes =$conn->query("SELECT * 
     FROM supervisor s inner join log l on l.Username=s.Email_supervisor
     WHERE l.Username='".$sesUser."' LIMIT 1"); // Get email from user sessions
@@ -15,11 +15,11 @@
     $results=$conn->query("select * 
     from student s inner join student_forms sf ON s.Email_student=sf.Email_student
     left join supervisor_forms sp ON sp.Email_student=s.Email_student
-    where Company='".$comp."' AND verfication=1 AND sf.FormI_1 is not null and (sp.FormI_1 is null or sp.FormI_1='')");
+    where Company='abc' AND verfication=1 AND sf.FormI_1 is not null and (sp.FormI_1 is null or sp.FormI_1='')");
 ?>
 <html lang="en">
 <head>
-	<title>Attest Form I-1</title>
+	<title>Att11est Form I-1</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />

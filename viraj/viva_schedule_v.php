@@ -1,7 +1,7 @@
 <?php
     session_start();
 	include('dbconnect_v.php');
-	if(isset($_SESSION['username'])){	
+	if(isset($_SESSION['login_user'])){	
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,7 +56,7 @@
 					</li>
 					<li class="nav-item">
 					<?php
-							if(isset($_SESSION['username'])){
+							if(isset($_SESSION['login_user'])){
 								echo '<a class="nav-link" href="logout_v.php">Log Out</a>';
 							}
 							else{

@@ -319,11 +319,16 @@ a {
     color: inherit;
     text-decoration: none
 }
+.test{
+	max-width: 525px;
+    min-height: 750px;
+	
+}
 
 .login-wrap {
     margin: auto;
     max-width: 525px;
-    min-height: 725px;
+    min-height: 750px;
     position: relative;
     background: url(../images/banner.jpg) no-repeat center;
     box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
@@ -648,7 +653,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light {
 .login-wrap1 {
     margin: auto;
     max-width: 725px;
-    min-height: 725px;
+    min-height: 750px;
     position: relative;
     background: url(../images/banner.jpg) no-repeat center;
     box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
